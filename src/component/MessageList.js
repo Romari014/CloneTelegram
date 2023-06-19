@@ -1,8 +1,7 @@
-// Імпортуємо потрібні технології
 import React from "react";
 import styled, { css } from "styled-components";
 
-// Генеруємо компонент "Список чатів"
+
 export default function ChatList({ list }) {
   return <List>{list.map(ChatItem)}</List>;
 }
@@ -28,29 +27,21 @@ function ChatItem({ message, isMe, time, id }) {
   );
 }
 
-// ======================================
-
 const Message = styled.div`
-  font-size: 16px; /* розмір */
-  color: #111; /* колір */
+  font-size: 16px;
+  color: #111;
 `;
-// Елемент "Час", який відповідає за відображення даних про час повідомлення
+
 const Time = styled.div`
-  font-size: 14px; /* розмір */
-  color: #8e8e93; /* колір */
+  font-size: 14px;
+  color: #8e8e93;
 `;
 
-// ======================================
 
-// Елемент "Одне повідомлення", який відповідає за відображення карточки одного повідомлення
 const Item = styled.div`
-  /* Колір фону */
   background-color: #fff;
-  /* Відступи всередині вертикальні та горизонтальні */
   padding: 15px 20px;
-  /* Закруглення країв */
   border-radius: 15px;
-
   display: flex;
   flex-direction: column;
   gap: 4px;

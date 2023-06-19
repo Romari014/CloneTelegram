@@ -1,7 +1,7 @@
 {
-  "name": "telegram-it-brains",
+  "name": "telegram-clone",
   "version": "1.0.0",
-  "description": "Друзі, вітаю вас усіх в проєкті нашого практикуму. Саме тут ви будете писати код та створювати новий функціонал для додатка. В проєкті ви знайдете коментарі, котрі допоможуть вам розібратися з кодом. Всім удачі!",
+  "description": "Creating telegram clone",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
