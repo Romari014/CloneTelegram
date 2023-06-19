@@ -18,7 +18,7 @@ const SendButtonTag = styled.div`
     height: 16px;
     width: 16px;
   }
-  border-radius: 0%;
+  border-radius: 50%;
   background-color: #007aff;
   transition: opacity 0.7s;
   &:hover {

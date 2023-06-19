@@ -3,8 +3,10 @@ import styled from "styled-components";
 import Header from "../component/Header";
 import Menu from "../component/Menu";
 import Page from "../component/Page";
-import Empty from "../component/Empty";
-import MessageList from "../component/MessageList"
+// import Empty from "../component/Empty";
+import MessageList from "../component/MessageList";
+import Input from "../component/Input";
+import SendBtn from "../component/SendButton";
 
 const MESSAGE_LIST = [
   {
@@ -22,12 +24,31 @@ const MESSAGE_LIST = [
 ];
 
 export default function Dialog() {
+  const [value, updateValue] = React.useState();
+
+  const [list, updateList] = React.useState(MESSAGE_LIST);
+
+  const addMessage = () => {
+    updateValue('')
+    
+    return updateList([...list, {
+      id: Math.random(),
+      message: value,
+      isMe: true,
+      time: new Date().toLocaleTimeString(),
+    }])
+  }
+
   return (
     <Page>
       {/* В title передаємо текст заголовка сторінки */}
       <Header title="Діалог чату" />
       <DialogView>
-        <MessageList list={MESSAGE_LIST}></MessageList>
+        <MessageList list={list}></MessageList>
+        <SendMessageBlock>
+          <Input value={value}  onChange={updateValue} placeholder="Введіть текст тут"/>
+          <SendBtn onClick={addMessage} />
+        </SendMessageBlock>
       </DialogView>
       <Menu />
     </Page>
