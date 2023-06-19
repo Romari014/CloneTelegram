@@ -32,7 +32,7 @@ function ChatItem({
 }) {
   return (
     <React.Fragment key={id}>
-      <Item>
+      <Item to="/dialog">
         <Image src={photo} />
         <Content>
           <Row>
@@ -169,7 +169,7 @@ const Content = styled.div`
 `;
 
 // Елемент "Один чат", який відповідає за відображення карточки одного чату
-const Item = styled.div`
+const Item = styled(Link)`
   display: flex;
   padding-left: 16px;
   padding-right: 16px;
